@@ -4,19 +4,25 @@
   <meta charset="utf-8">
   <title>KOVAN Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="logo_kovan.png"> <!-- sekme ikonu -->
+  <link rel="icon" href="logo_kovan.png">
   <style>
     body{font:16px/1.5 system-ui,Segoe UI,Roboto;background:#0f1114;color:#e9eaee;margin:40px}
-    .brand{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-    .brand img{height:64px;display:block}
-    .btn{display:inline-block;margin:8px 0 20px;padding:10px 14px;border-radius:10px;background:#d4af37;color:#111;text-decoration:none;font-weight:700}
+    .brand{margin:0 0 18px 0}
+    .brand img.logo{
+      height:72px;                 /* logonun yüksekliği */
+      display:block;
+      border-radius:16px;          /* köşeleri yumuşat */
+      filter:
+        drop-shadow(0 2px 10px rgba(0,0,0,.35))
+        drop-shadow(0 0 16px rgba(212,175,55,.25)); /* etrafı hafif yumuşat */
+    }
+    a.btn{display:inline-block;margin:8px 0 20px;padding:10px 14px;border-radius:10px;background:#d4af37;color:#111;text-decoration:none;font-weight:700}
     img.demo{max-width:720px;border:1px solid #333}
   </style>
 </head>
 <body>
   <div class="brand">
-    <img src="logo_kovan.png" alt="KOVAN logosu">
-    <h1 style="margin:0">KOVAN</h1>
+    <img class="logo" src="logo_kovan.png" alt="KOVAN logosu">
   </div>
 
   <a class="btn" href="https://github.com/oguzcenkyilmaz6-cmd/KOVAN">GitHub’da İncele</a>

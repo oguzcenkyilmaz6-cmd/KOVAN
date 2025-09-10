@@ -6,28 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="logo_kovan.png">
   <style>
-    body{font:16px/1.5 system-ui,Segoe UI,Roboto;background:#0f1114;color:#e9eaee;margin:40px}
-    .brand{margin:0 0 18px 0}
+    body{font:16px/1.5 system-ui,Segoe UI,Roboto;background:#0f1114;color:#e9eaee;margin:0}
+    .wrap{max-width:980px;margin:0 auto;padding:40px 24px}
+    /* LOGO alanı: ortalı + geniş */
+    .brand{display:flex;justify-content:center;margin:6px 0 22px}
     .brand img.logo{
-      height:72px;                 /* logonun yüksekliği */
-      display:block;
-      border-radius:16px;          /* köşeleri yumuşat */
+      width:clamp(220px, 28vw, 340px); /* genişlik (ekrana göre büyür) */
+      height:auto;                      /* boyu oranlı gelsin */
+      border-radius:18px;               /* köşeleri yumuşat */
       filter:
         drop-shadow(0 2px 10px rgba(0,0,0,.35))
-        drop-shadow(0 0 16px rgba(212,175,55,.25)); /* etrafı hafif yumuşat */
+        drop-shadow(0 0 16px rgba(212,175,55,.25)); /* kenarları yumuşatır */
+      display:block;
     }
-    a.btn{display:inline-block;margin:8px 0 20px;padding:10px 14px;border-radius:10px;background:#d4af37;color:#111;text-decoration:none;font-weight:700}
-    img.demo{max-width:720px;border:1px solid #333}
+    /* Buton ve demo görseli de ortalı */
+    a.btn{display:block;width:max-content;margin:10px auto 24px;padding:10px 14px;border-radius:10px;background:#d4af37;color:#111;text-decoration:none;font-weight:700}
+    img.demo{display:block;margin:0 auto;max-width:720px;border:1px solid #333}
+    p.center{text-align:center;margin:8px 0 14px}
   </style>
 </head>
 <body>
-  <div class="brand">
-    <img class="logo" src="logo_kovan.png" alt="KOVAN logosu">
+  <div class="wrap">
+    <div class="brand">
+      <img class="logo" src="logo_kovan.png" alt="KOVAN logosu">
+    </div>
+
+    <a class="btn" href="https://github.com/oguzcenkyilmaz6-cmd/KOVAN">GitHub’da İncele</a>
+
+    <p class="center">Yeraltı Delme Patern Demo Görüntüsü:</p>
+    <img class="demo" src="out_pattern.png" alt="KOVAN Demo">
   </div>
-
-  <a class="btn" href="https://github.com/oguzcenkyilmaz6-cmd/KOVAN">GitHub’da İncele</a>
-
-  <p>Yeraltı delme patern demo görüntüsü:</p>
-  <img class="demo" src="out_pattern.png" alt="KOVAN Demo">
 </body>
 </html>
